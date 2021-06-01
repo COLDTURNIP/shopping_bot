@@ -10,6 +10,8 @@ pub(crate) fn version() -> String {
 
 #[tokio::main]
 async fn main() -> Result<()> {
+    teloxide::enable_logging!();
+
     let args: Vec<String> = env::args().collect();
     main_fn(args).await
 }
